@@ -130,6 +130,46 @@
       color: var(--muted);
       font-size: 0.85rem;
     }
+    /* Mobile tweaks – keep desktop layout unchanged */
+    @media (max-width: 768px) {
+      .hero-wrap {
+        height: 30vh;
+      }
+      .wrap {
+        padding: 1.25rem 0.75rem 1.75rem 0.75rem;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 1.5rem 0 0.75rem;
+      }
+      table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1.5rem;
+      }
+      thead, tbody, tr {
+        width: 100%;
+      }
+      th:not(:first-child),
+      td:not(:first-child) {
+        min-width: 200px;
+      }
+      th, td {
+        padding: 0.5rem 0.4rem;
+      }
+      audio {
+        min-width: 0;
+        height: 36px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -160,83 +200,83 @@
       <tbody>
         <tr>
           <td title="237-134500-0020.flac">237-134500-0020.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_clean/237-134500-0020.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_clean/237-134500-0020.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_clean/237-134500-0020.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_clean/237-134500-0020.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_clean/237-134500-0020.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_clean/237-134500-0020.flac"></div></td>
         </tr>
         <tr>
           <td title="4970-29093-0018.flac">4970-29093-0018.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_clean/4970-29093-0018.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_clean/4970-29093-0018.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_clean/4970-29093-0018.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_clean/4970-29093-0018.flac"></div></td>
         </tr>
         <tr>
           <td title="672-122797-0011.flac">672-122797-0011.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_clean/672-122797-0011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_clean/672-122797-0011.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_clean/672-122797-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_clean/672-122797-0011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_clean/672-122797-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_clean/672-122797-0011.flac"></div></td>
         </tr>
         <tr>
           <td title="6829-68771-0029.flac">6829-68771-0029.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_clean/6829-68771-0029.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_clean/6829-68771-0029.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_clean/6829-68771-0029.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_clean/6829-68771-0029.flac"></div></td>
         </tr>
         <tr>
           <td title="8224-274384-0004.flac">8224-274384-0004.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_clean/8224-274384-0004.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_clean/8224-274384-0004.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_clean/8224-274384-0004.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_clean/8224-274384-0004.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -263,83 +303,83 @@
       <tbody>
         <tr>
           <td title="3538-142836-0017.flac">3538-142836-0017.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_other/3538-142836-0017.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_other/3538-142836-0017.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_other/3538-142836-0017.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_other/3538-142836-0017.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_other/3538-142836-0017.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_other/3538-142836-0017.flac"></div></td>
         </tr>
         <tr>
           <td title="4198-12259-0032.flac">4198-12259-0032.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_other/4198-12259-0032.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_other/4198-12259-0032.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_other/4198-12259-0032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_other/4198-12259-0032.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_other/4198-12259-0032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_other/4198-12259-0032.flac"></div></td>
         </tr>
         <tr>
           <td title="4198-12281-0003.flac">4198-12281-0003.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_other/4198-12281-0003.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_other/4198-12281-0003.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_other/4198-12281-0003.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_other/4198-12281-0003.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_other/4198-12281-0003.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_other/4198-12281-0003.flac"></div></td>
         </tr>
         <tr>
           <td title="6070-86745-0005.flac">6070-86745-0005.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_other/6070-86745-0005.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_other/6070-86745-0005.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_other/6070-86745-0005.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_other/6070-86745-0005.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_other/6070-86745-0005.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_other/6070-86745-0005.flac"></div></td>
         </tr>
         <tr>
           <td title="7105-2340-0011.flac">7105-2340-0011.flac</td>
-          <td><audio controls preload="none" src="samples/gt/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/librispeech_test_other/7105-2340-0011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/librispeech_test_other/7105-2340-0011.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/librispeech_test_other/7105-2340-0011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/librispeech_test_other/7105-2340-0011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/librispeech_test_other/7105-2340-0011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/librispeech_test_other/7105-2340-0011.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -366,83 +406,83 @@
       <tbody>
         <tr>
           <td title="id10270-x6uYqmx31kE-00011-001.wav">id10270-x6uYqmx31kE-00011-001.wav</td>
-          <td><audio controls preload="none" src="samples/gt/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/titw_test/id10270-x6uYqmx31kE-00011-001.wav"></div></td>
         </tr>
         <tr>
           <td title="id10279-nTPJ6asPSV0-00004-002.wav">id10279-nTPJ6asPSV0-00004-002.wav</td>
-          <td><audio controls preload="none" src="samples/gt/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/titw_test/id10279-nTPJ6asPSV0-00004-002.wav"></div></td>
         </tr>
         <tr>
           <td title="id10280-PQBBKBYGWgU-00005-001.wav">id10280-PQBBKBYGWgU-00005-001.wav</td>
-          <td><audio controls preload="none" src="samples/gt/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/titw_test/id10280-PQBBKBYGWgU-00005-001.wav"></div></td>
         </tr>
         <tr>
           <td title="id10281-ni6gO5jDLJE-00005-001.wav">id10281-ni6gO5jDLJE-00005-001.wav</td>
-          <td><audio controls preload="none" src="samples/gt/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/titw_test/id10281-ni6gO5jDLJE-00005-001.wav"></div></td>
         </tr>
         <tr>
           <td title="id10283-u3s9xdUlmmk-00008-005.wav">id10283-u3s9xdUlmmk-00008-005.wav</td>
-          <td><audio controls preload="none" src="samples/gt/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/titw_test/id10283-u3s9xdUlmmk-00008-005.wav"></div></td>
         </tr>
       </tbody>
     </table>
@@ -469,83 +509,83 @@
       <tbody>
         <tr>
           <td title="11695_8674_000043.flac">11695_8674_000043.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_german_test/11695_8674_000043.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_german_test/11695_8674_000043.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_german_test/11695_8674_000043.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_german_test/11695_8674_000043.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_german_test/11695_8674_000043.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_german_test/11695_8674_000043.flac"></div></td>
         </tr>
         <tr>
           <td title="2252_1599_000057.flac">2252_1599_000057.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_german_test/2252_1599_000057.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_german_test/2252_1599_000057.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_german_test/2252_1599_000057.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_german_test/2252_1599_000057.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_german_test/2252_1599_000057.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_german_test/2252_1599_000057.flac"></div></td>
         </tr>
         <tr>
           <td title="4748_2620_000026.flac">4748_2620_000026.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_german_test/4748_2620_000026.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_german_test/4748_2620_000026.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_german_test/4748_2620_000026.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_german_test/4748_2620_000026.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_german_test/4748_2620_000026.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_german_test/4748_2620_000026.flac"></div></td>
         </tr>
         <tr>
           <td title="8223_6660_000051.flac">8223_6660_000051.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_german_test/8223_6660_000051.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_german_test/8223_6660_000051.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_german_test/8223_6660_000051.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_german_test/8223_6660_000051.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_german_test/8223_6660_000051.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_german_test/8223_6660_000051.flac"></div></td>
         </tr>
         <tr>
           <td title="91_82_000028.flac">91_82_000028.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_german_test/91_82_000028.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_german_test/91_82_000028.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_german_test/91_82_000028.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_german_test/91_82_000028.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_german_test/91_82_000028.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_german_test/91_82_000028.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -572,83 +612,83 @@
       <tbody>
         <tr>
           <td title="12080_11650_000101.flac">12080_11650_000101.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_french_test/12080_11650_000101.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_french_test/12080_11650_000101.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_french_test/12080_11650_000101.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_french_test/12080_11650_000101.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_french_test/12080_11650_000101.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_french_test/12080_11650_000101.flac"></div></td>
         </tr>
         <tr>
           <td title="2223_1745_000040.flac">2223_1745_000040.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_french_test/2223_1745_000040.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_french_test/2223_1745_000040.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_french_test/2223_1745_000040.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_french_test/2223_1745_000040.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_french_test/2223_1745_000040.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_french_test/2223_1745_000040.flac"></div></td>
         </tr>
         <tr>
           <td title="2465_1943_000158.flac">2465_1943_000158.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_french_test/2465_1943_000158.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_french_test/2465_1943_000158.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_french_test/2465_1943_000158.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_french_test/2465_1943_000158.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_french_test/2465_1943_000158.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_french_test/2465_1943_000158.flac"></div></td>
         </tr>
         <tr>
           <td title="5790_4893_000083.flac">5790_4893_000083.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_french_test/5790_4893_000083.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_french_test/5790_4893_000083.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_french_test/5790_4893_000083.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_french_test/5790_4893_000083.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_french_test/5790_4893_000083.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_french_test/5790_4893_000083.flac"></div></td>
         </tr>
         <tr>
           <td title="9834_9697_000129.flac">9834_9697_000129.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_french_test/9834_9697_000129.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_french_test/9834_9697_000129.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_french_test/9834_9697_000129.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_french_test/9834_9697_000129.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_french_test/9834_9697_000129.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_french_test/9834_9697_000129.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -675,83 +715,83 @@
       <tbody>
         <tr>
           <td title="4009_5281_000021.flac">4009_5281_000021.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_italian_test/4009_5281_000021.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_italian_test/4009_5281_000021.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_italian_test/4009_5281_000021.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_italian_test/4009_5281_000021.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_italian_test/4009_5281_000021.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_italian_test/4009_5281_000021.flac"></div></td>
         </tr>
         <tr>
           <td title="6698_5281_000118.flac">6698_5281_000118.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_italian_test/6698_5281_000118.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_italian_test/6698_5281_000118.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_italian_test/6698_5281_000118.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_italian_test/6698_5281_000118.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_italian_test/6698_5281_000118.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_italian_test/6698_5281_000118.flac"></div></td>
         </tr>
         <tr>
           <td title="7372_6589_000027.flac">7372_6589_000027.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_italian_test/7372_6589_000027.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_italian_test/7372_6589_000027.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_italian_test/7372_6589_000027.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_italian_test/7372_6589_000027.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_italian_test/7372_6589_000027.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_italian_test/7372_6589_000027.flac"></div></td>
         </tr>
         <tr>
           <td title="7458_6589_000050.flac">7458_6589_000050.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_italian_test/7458_6589_000050.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_italian_test/7458_6589_000050.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_italian_test/7458_6589_000050.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_italian_test/7458_6589_000050.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_italian_test/7458_6589_000050.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_italian_test/7458_6589_000050.flac"></div></td>
         </tr>
         <tr>
           <td title="8582_7877_000033.flac">8582_7877_000033.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_italian_test/8582_7877_000033.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_italian_test/8582_7877_000033.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_italian_test/8582_7877_000033.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_italian_test/8582_7877_000033.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_italian_test/8582_7877_000033.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_italian_test/8582_7877_000033.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -778,83 +818,83 @@
       <tbody>
         <tr>
           <td title="10667_9310_000098.flac">10667_9310_000098.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_spanish_test/10667_9310_000098.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_spanish_test/10667_9310_000098.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_spanish_test/10667_9310_000098.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_spanish_test/10667_9310_000098.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_spanish_test/10667_9310_000098.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_spanish_test/10667_9310_000098.flac"></div></td>
         </tr>
         <tr>
           <td title="12249_11991_000079.flac">12249_11991_000079.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_spanish_test/12249_11991_000079.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_spanish_test/12249_11991_000079.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_spanish_test/12249_11991_000079.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_spanish_test/12249_11991_000079.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_spanish_test/12249_11991_000079.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_spanish_test/12249_11991_000079.flac"></div></td>
         </tr>
         <tr>
           <td title="12525_11991_000001.flac">12525_11991_000001.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_spanish_test/12525_11991_000001.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_spanish_test/12525_11991_000001.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_spanish_test/12525_11991_000001.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_spanish_test/12525_11991_000001.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_spanish_test/12525_11991_000001.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_spanish_test/12525_11991_000001.flac"></div></td>
         </tr>
         <tr>
           <td title="3468_1378_000066.flac">3468_1378_000066.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_spanish_test/3468_1378_000066.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_spanish_test/3468_1378_000066.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_spanish_test/3468_1378_000066.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_spanish_test/3468_1378_000066.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_spanish_test/3468_1378_000066.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_spanish_test/3468_1378_000066.flac"></div></td>
         </tr>
         <tr>
           <td title="7678_7613_000022.flac">7678_7613_000022.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_spanish_test/7678_7613_000022.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_spanish_test/7678_7613_000022.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_spanish_test/7678_7613_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_spanish_test/7678_7613_000022.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_spanish_test/7678_7613_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_spanish_test/7678_7613_000022.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -881,83 +921,83 @@
       <tbody>
         <tr>
           <td title="3034_2211_000007.flac">3034_2211_000007.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_dutch_test/3034_2211_000007.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_dutch_test/3034_2211_000007.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_dutch_test/3034_2211_000007.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_dutch_test/3034_2211_000007.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_dutch_test/3034_2211_000007.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_dutch_test/3034_2211_000007.flac"></div></td>
         </tr>
         <tr>
           <td title="3034_2211_000172.flac">3034_2211_000172.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_dutch_test/3034_2211_000172.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_dutch_test/3034_2211_000172.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_dutch_test/3034_2211_000172.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_dutch_test/3034_2211_000172.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_dutch_test/3034_2211_000172.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_dutch_test/3034_2211_000172.flac"></div></td>
         </tr>
         <tr>
           <td title="4429_3478_000032.flac">4429_3478_000032.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_dutch_test/4429_3478_000032.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_dutch_test/4429_3478_000032.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_dutch_test/4429_3478_000032.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_dutch_test/4429_3478_000032.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_dutch_test/4429_3478_000032.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_dutch_test/4429_3478_000032.flac"></div></td>
         </tr>
         <tr>
           <td title="4429_3991_000224.flac">4429_3991_000224.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_dutch_test/4429_3991_000224.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_dutch_test/4429_3991_000224.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_dutch_test/4429_3991_000224.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_dutch_test/4429_3991_000224.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_dutch_test/4429_3991_000224.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_dutch_test/4429_3991_000224.flac"></div></td>
         </tr>
         <tr>
           <td title="4429_3991_000699.flac">4429_3991_000699.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_dutch_test/4429_3991_000699.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_dutch_test/4429_3991_000699.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_dutch_test/4429_3991_000699.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_dutch_test/4429_3991_000699.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_dutch_test/4429_3991_000699.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_dutch_test/4429_3991_000699.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -984,83 +1024,83 @@
       <tbody>
         <tr>
           <td title="8758_8338_000092.flac">8758_8338_000092.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_polish_test/8758_8338_000092.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_polish_test/8758_8338_000092.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_polish_test/8758_8338_000092.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_polish_test/8758_8338_000092.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_polish_test/8758_8338_000092.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_polish_test/8758_8338_000092.flac"></div></td>
         </tr>
         <tr>
           <td title="8758_8338_000134.flac">8758_8338_000134.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_polish_test/8758_8338_000134.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_polish_test/8758_8338_000134.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_polish_test/8758_8338_000134.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_polish_test/8758_8338_000134.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_polish_test/8758_8338_000134.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_polish_test/8758_8338_000134.flac"></div></td>
         </tr>
         <tr>
           <td title="9098_8338_000022.flac">9098_8338_000022.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_polish_test/9098_8338_000022.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_polish_test/9098_8338_000022.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_polish_test/9098_8338_000022.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_polish_test/9098_8338_000022.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_polish_test/9098_8338_000022.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_polish_test/9098_8338_000022.flac"></div></td>
         </tr>
         <tr>
           <td title="9098_8338_000094.flac">9098_8338_000094.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_polish_test/9098_8338_000094.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_polish_test/9098_8338_000094.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_polish_test/9098_8338_000094.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_polish_test/9098_8338_000094.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_polish_test/9098_8338_000094.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_polish_test/9098_8338_000094.flac"></div></td>
         </tr>
         <tr>
           <td title="9860_8338_000036.flac">9860_8338_000036.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_polish_test/9860_8338_000036.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_polish_test/9860_8338_000036.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_polish_test/9860_8338_000036.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_polish_test/9860_8338_000036.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_polish_test/9860_8338_000036.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_polish_test/9860_8338_000036.flac"></div></td>
         </tr>
       </tbody>
     </table>
@@ -1087,89 +1127,127 @@
       <tbody>
         <tr>
           <td title="12626_10229_000012.flac">12626_10229_000012.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_portuguese_test/12626_10229_000012.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_portuguese_test/12626_10229_000012.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_portuguese_test/12626_10229_000012.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_portuguese_test/12626_10229_000012.flac"></div></td>
         </tr>
         <tr>
           <td title="12670_13511_000011.flac">12670_13511_000011.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_portuguese_test/12670_13511_000011.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_portuguese_test/12670_13511_000011.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_portuguese_test/12670_13511_000011.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_portuguese_test/12670_13511_000011.flac"></div></td>
         </tr>
         <tr>
           <td title="13063_13511_000063.flac">13063_13511_000063.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_portuguese_test/13063_13511_000063.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_portuguese_test/13063_13511_000063.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_portuguese_test/13063_13511_000063.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_portuguese_test/13063_13511_000063.flac"></div></td>
         </tr>
         <tr>
           <td title="4405_3648_000061.flac">4405_3648_000061.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_portuguese_test/4405_3648_000061.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_portuguese_test/4405_3648_000061.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_portuguese_test/4405_3648_000061.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_portuguese_test/4405_3648_000061.flac"></div></td>
         </tr>
         <tr>
           <td title="7925_6390_000070.flac">7925_6390_000070.flac</td>
-          <td><audio controls preload="none" src="samples/gt/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/bigcodec/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/dac_8/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/focal/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/gt/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/jhcodec_mimi_recon_1m_8/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/bigcodec/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/dac_8/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/focal/mls_portuguese_test/7925_6390_000070.flac"></div></td>
         </tr>
         <tr class="sample-row-2">
           <td class="continuation"></td>
-          <td><audio controls preload="none" src="samples/magicodec/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_32/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/mimi_8/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/nemonano/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
-          <td><audio controls preload="none" src="samples/stablecodec/mls_portuguese_test/7925_6390_000070.flac"></audio></td>
+          <td><div class="audio-placeholder" data-src="samples/magicodec/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_32/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/mimi_8/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/nemonano/mls_portuguese_test/7925_6390_000070.flac"></div></td>
+          <td><div class="audio-placeholder" data-src="samples/stablecodec/mls_portuguese_test/7925_6390_000070.flac"></div></td>
         </tr>
       </tbody>
     </table>
     <footer>
-      Ground truth (GT) and codec reconstructions from LibriSpeech, MLS, and TITW test sets.
+      JHCodec
     </footer>
   </div>
+  <script>
+    (function() {
+      const placeholders = document.querySelectorAll('.audio-placeholder');
+      if (!placeholders.length) return;
+
+      function createAudio(el) {
+        if (el.dataset.loaded) return;
+        el.dataset.loaded = 'true';
+        const src = el.dataset.src;
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        audio.preload = 'none';
+        audio.src = src;
+        audio.style.width = '100%';
+        el.replaceWith(audio);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries, obs) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              obs.unobserve(el);
+              createAudio(el);
+            }
+          });
+        }, { rootMargin: '200px 0px' });
+
+        placeholders.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        placeholders.forEach(function(el) {
+          createAudio(el);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
