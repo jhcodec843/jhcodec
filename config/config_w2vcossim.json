@@ -1,0 +1,120 @@
+{
+    "codec": {
+        "mlp_in":{
+            "in_features": 320,
+            "hidden_features": 768,
+            "out_features": 1024,
+            "compute_dtype": "float32"
+        },
+        "mlp_out":{
+            "in_features": 1024,
+            "hidden_features": 768,
+            "out_features": 320,
+            "compute_dtype": "float32"
+        },
+        "decoder": {
+            "n_layers": 8,
+            "n_embd": 1024,
+            "n_hidden": 4096,
+            "n_heads": 16,
+            "head_dim": 64,
+            "compute_dtype": "float32",
+            "window_size": 15,
+            "dropout_rate": 0.1
+        },
+        "encoder": {
+            "n_layers": 8,
+            "n_embd": 1024,
+            "n_hidden": 4096,
+            "n_heads": 16,
+            "head_dim": 64,
+            "compute_dtype": "float32",
+            "window_size": 15,
+            "dropout_rate": 0.1
+        },
+        "rvq": {
+            "num_codebooks": 8,
+            "codebook_size": 1024,
+            "embedding_dim": 16,
+            "latent_dim": 16,
+            "updown_linears": false,
+            "codebook_weight_dtype": "float32"
+        }
+    },
+    "w2v":{
+        "mlp_in":{
+            "in_features": 320,
+            "hidden_features": 768,
+            "out_features": 1024,
+            "compute_dtype": "float32"
+        },
+        "encoder": {
+            "n_layers": 8,
+            "n_embd": 1024,
+            "n_hidden": 4096,
+            "n_heads": 16,
+            "head_dim": 64,
+            "compute_dtype": "float32",
+            "window_size": 15,
+            "dropout_rate": 0.1
+        },
+        "rvq": {
+            "num_codebooks": 8,
+            "codebook_size": 1024,
+            "embedding_dim": 1024,
+            "latent_dim": 1024,
+            "updown_linears": false,
+            "codebook_weight_dtype": "float32"
+        },
+        "training": {
+            "noise_masking": 0.1,
+            "noise_augmentation": 0.1
+        }
+    },
+    "training":{
+        "resume": false,
+        "loss_type": "cossim",
+        "strict_model": true,
+        "load_discriminator": false,
+        "learning_rate": 1e-4,
+        "weight_decay": 1e-2,
+        "discriminator_start_steps": 100,
+        "discriminator_segment_duration": 1.28,
+        "apply_apa": true,
+        "warmup_steps": 1000,
+        "min_lr": 1e-6,
+        "num_epochs": 100000,
+        "use_continuous": 0.1,
+        "max_grad_norm": 1000.0,
+        "batch_size": 300,
+        "gradient_accumulation_steps": 1,
+        "num_workers": 6,
+        "use_phaseaug": true,
+        "init_dataset": false,
+        "profile": false,
+        "verbose_grad_norm": false,
+        "verbose_norm_threshold_max": 5.0,
+        "verbose_norm_threshold_min": 0.001,
+        "verbose_paramter_norm": false,
+        "use_discriminator": false,
+        "codebook_reset_interval": 1000
+    },
+    "loss":{
+        "recon_loss_weight": 1
+    },
+    "data": {
+        "audio_dir": "/data",
+        "sample_rate": 16000,
+        "segment_duration": 10.24,
+        "cache_dir": "/data/dataloader/v9"
+    },
+    "logging": {
+        "log_interval": 100,
+        "save_interval": 500,
+        "eval_interval": 3000,
+        "experiment_dir":  "/data/jhcodec/sw2v/{experiment_name}",
+        "checkpoint_dir":  "/data/jhcodec/sw2v/{experiment_name}/checkpoints",
+        "tensorboard_dir": "/data/jhcodec/sw2v/{experiment_name}/tensorboard",
+        "n_samples": 3
+      }
+}
