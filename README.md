@@ -6,20 +6,23 @@
 
 
 *Reconstruct! Don't Encode: Self-Supervised Representation Reconstruction Loss for High-Intelligibility and Low-Latency Streaming Neural Audio Codec*
+![](asset/jhcodec.jpeg)
 
 JHCodec is a pure Transformer decoder based neural audio codec with residual vector quantization. It shows state-of-the-art performance with minimal latency.
+![](asset/overall.png)
 
 ## Overview
 
-This repository contains the *implementation for training* neural audio codecs with end-to-end training capabilities. The codec supports:
-- Multiple VQ architectures (DAC, MIMI)
-- End-to-end training with w2v-bert-2.0 semantic features
+This repository contains the *implementation for training and inference* neural audio codecs with end-to-end training capabilities. 
+The codec supports:
+- Multiple RVQ architectures (DAC, *MIMI*)
+- Supports end-to-end training leveraging (distilled) w2v-bert-2.0 semantic features
 - SSRR and non-SSRR variants
 
 
 ## TODO
 - [ ] Revise Readme
-- [ ] Upload checkpoint
+- [x] Upload checkpoint
 - [x] Upload to HuggingFace
 - [ ] Upload to PyPI (probably after the review)
 - [ ] Make non-anonymous (after the review)
