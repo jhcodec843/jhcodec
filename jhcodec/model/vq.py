@@ -888,7 +888,7 @@ class RVQMimi(nn.Module):
         B, T, C = indices.shape
         assert C >= n_codebooks_max, f"C = {C} < n_codebooks_max = {n_codebooks_max}"
         with torch.no_grad():
-            mask = torch.arange(self.num_codebooks, device=indices.device).unsqueeze(0) < n_codebooks.squeeze(-1)  # [1,num_codebooks]
+            mask = torch.arange(n_codebooks_max, device=indices.device).unsqueeze(0) < n_codebooks.squeeze(-1)  # [1,num_codebooks]
             mask = mask.to(indices.dtype)
 
         # First codebook: semantic
@@ -899,7 +899,7 @@ class RVQMimi(nn.Module):
         rvq_embed = semantic_decoded
 
         # RVQ codebooks
-        for i in range(self.num_codebooks-1):
+        for i in range(n_codebooks_max-1):
             if getattr(self, "up_vqs", None) is not None:
                 rvq_codebook_decode = self.up_vqs[i].decode(indices[:, :, i+1]) * mask[:, i+1].unsqueeze(-1).unsqueeze(-1)
             else:

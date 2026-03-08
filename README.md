@@ -1,5 +1,10 @@
 # Official Implementation of JHCodec
 
+[![GitHub Repo stars](https://img.shields.io/github/stars/jhcodec843/jhcodec?color=yellow&label=JHCodec&logo=github&style=flat-square)](https://github.com/jhcodec843/jhcodec)
+[![HuggingFace Checkpoints](https://img.shields.io/badge/HuggingFace-Checkpoints-blue?logo=huggingface&style=flat-square)](https://huggingface.co/jhcodec)
+[![GitHub.io Audio Samples](https://img.shields.io/badge/GitHub.io-Audio_Samples-blue?logo=Github&style=flat-square)](https://jhcodec843.github.io/jhcodec/)
+
+
 *Reconstruct! Don't Encode: Self-Supervised Representation Reconstruction Loss for High-Intelligibility and Low-Latency Streaming Neural Audio Codec*
 
 JHCodec is a pure Transformer decoder based neural audio codec with residual vector quantization. It shows state-of-the-art performance with minimal latency.
@@ -15,7 +20,7 @@ This repository contains the *implementation for training* neural audio codecs w
 ## TODO
 - [ ] Revise Readme
 - [ ] Upload checkpoint
-- [ ] Upload to HuggingFace
+- [x] Upload to HuggingFace
 - [ ] Upload to PyPI (probably after the review)
 - [ ] Make non-anonymous (after the review)
 
@@ -49,6 +54,13 @@ pip install alias-free-torch==0.0.6 phaseaug
 ```
 
 Flash-Attention should be installed carefully. Please read the official [README](https://github.com/Dao-AILab/flash-attention).
+
+## Official Checkpoints 
+| Model         | Description                                                     | Link                                                           |
+|---------------|-----------------------------------------------------------------|----------------------------------------------------------------|
+| JHCodec       | Streaming RVQ Codec, JHCodec-M (1M)                             | [jhcodec/jhcodec](https://huggingface.co/jhcodec/jhcodec)      |
+| SW2V (60k)    | Streaming Speech Representation Extractor                       | [jhcodec/sw2v_60k](https://huggingface.co/jhcodec/sw2v_60k)  |
+| SW2V (120k)   | Streaming Speech Representation Extractor, more robust to noise | [jhcodec/sw2v_120k](https://huggingface.co/jhcodec/sw2v_120k)  |
 
 ## Project Structure
 
@@ -139,14 +151,24 @@ Key training parameters (configurable in JSON config files):
 
 ## Decoding
 
-Example
+Single Files
+```bash
+python jhcodec/inference.py \
+    --config config/config_mimi_recon.json \
+    --checkpoint jhcodec_mimi_1000000.pt \
+    --input_file /path/to/input.wav \
+    --output_file /path/to/output.wav \
+    --num_codebooks 8
+```
+
+Multiple Files
 ```bash
 python jhcodec/decode_eval.py \
     --config config/config_dac_norecon.json \
     --checkpoint /path/to/checkpoint_300000.pt \
     --name jhcodec_dac_norecon \
     --glob_pattern "/path/to/audio/*.wav" \
-    --out_dir "out_dir" \ 
+    --out_dir "out_dir" \
     --hierarchy 4
 ```
 
