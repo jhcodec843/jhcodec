@@ -38,13 +38,15 @@ pip install -e .
 - Python >= 3.10 (required for using the `X | None` union type syntax in type hints; see [PEP 604](https://peps.python.org/pep-0604/)), or manually remove this syntax if using an older Python version
 - PyTorch/TorchAudio with CUDA support: tested with `torch==2.6.0+cu124` and `torch==2.9.1+cu128`
 - [omegaconf==2.3.0](https://omegaconf.readthedocs.io/en/2.3_branch/): for configuration management
-- [Flash-Attention](https://github.com/Dao-AILab/flash-attention): Non-fa code shows degraded quality. We tested with `flash-attn==2.7.4.post1` and `flash-attn==2.8.3`. 
+- [Flash-Attention](https://github.com/Dao-AILab/flash-attention): For fast train/inference. We tested with `flash-attn==2.7.4.post1` and `flash-attn==2.8.3`. 
 - [HF transformers](https://huggingface.co/docs/transformers/index): Required only for running baselines and [w2v-bert2.0](https://huggingface.co/facebook/w2v-bert-2.0). JHCodec inference has no dependency on it.
 
 We have provided a [Shell Script](/installcu128.sh) to help set up the environment. 
 PLEASE DO NOT RUN It Directly. INSTEAD, REVIEW THE SCRIPT AND MODIFY IT AS NEEDED FOR YOUR SYSTEM.
 
 OUR MODEL REQUIRES ONLY THE MINIMUM DEPENDENCIES LISTED ABOVE.
+
+**Note: Running on CPU currently leads to degraded reconstruction quality. If you discover the cause or a solution, please open an issue.**
 
 #### For training
 - [PhaseAug](https://github.com/maum-ai/phaseaug)
@@ -161,7 +163,8 @@ python jhcodec/inference.py \
     --checkpoint jhcodec_mimi_1000000.pt \
     --input_file /path/to/input.wav \
     --output_file /path/to/output.wav \
-    --num_codebooks 8
+    --num_codebooks 8 \
+    --device 'cuda'
 ```
 
 Multiple Files
@@ -190,24 +193,6 @@ The decoding script supports various audio datasets:
 - **TITW**: `/data/titw/titw_hard/test/*.wav`
 - **MLS**: `/data/MLS/mls_*/test/audio/*/*/*.flac`
 
-## Evaluation
-
-The project includes comprehensive evaluation scripts for:
-
-### Word Error Rate (WER)
-- `evaluation/wer_librispeech.py` - WER on LibriSpeech
-- `evaluation/wer_titw.py` - WER on TITW
-- `evaluation/wer_mls.py` - WER on MLS
-
-### Mean Opinion Score (MOS)
-- `evaluation/mos_librispeech.py` - MOS on LibriSpeech
-- `evaluation/mos_titw.py` - MOS on TITW
-
-### Speaker Similarity
-- `evaluation/speaker_similarity_librispeech.py` - Speaker similarity on LibriSpeech
-- `evaluation/speaker_similarity_titw.py` - Speaker similarity on TITW
-
-Run evaluations using the corresponding SLURM scripts in the `evaluation/` directory.
 
 ## Configuration
 

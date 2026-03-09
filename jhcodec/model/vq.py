@@ -93,7 +93,7 @@ class VQ(nn.Module):
     
     def forward(self, x): # x: [B,T,C]
         with torch.no_grad():
-            if USE_TRITON:
+            if USE_TRITON and x.device.type == "cuda":
                 selected_indices = vq_triton(x, self.codebook.weight) # [B,T]
             else:
                 selected_indices = torch.argmin(self.distance(x, self.codebook.weight), dim=-1) # [B,T]
@@ -145,7 +145,7 @@ class VQ(nn.Module):
 
     def encode(self, x): # x: [B,T,C]
         with torch.no_grad():
-            if USE_TRITON:
+            if USE_TRITON and x.device.type == "cuda":
                 selected_indices = vq_triton(x, self.codebook.weight) # [B,T]
             else:
                 selected_indices = torch.argmin(self.distance(x, self.codebook.weight), dim=-1) # [B,T]
@@ -162,7 +162,7 @@ class VQforRVQ(VQ):
 
     def forward(self, x): # x: [B,T,C]
         with torch.no_grad():
-            if USE_TRITON:
+            if USE_TRITON and x.device.type == "cuda":
                 selected_indices = vq_triton(x, self.codebook.weight) # [B,T]
             else:
                 selected_indices = torch.argmin(self.distance(x, self.codebook.weight), dim=-1) # [B,T]

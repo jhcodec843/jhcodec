@@ -15,6 +15,8 @@ def main():
     parser.add_argument("--input_file", type=str, required=True, help="Input WAV/flac file")
     parser.add_argument("--output_file", type=str, required=True, help="Output WAV/flac file")
     parser.add_argument("--num_codebooks", type=int, default=8, help="Number of codebooks to use for decoding")
+    parser.add_argument("--device", type=str, default="cuda", help="Device to use for decoding")
+    # cannot understand why, but cpu shows degradation in reconstruction quality, please report if you find the reason
     args = parser.parse_args()
 
     config = omegaconf.OmegaConf.load(args.config)
@@ -30,7 +32,7 @@ def main():
     _, _, _, _, _ = utils.load_checkpoint(
         codec, None, None, checkpoint_path,
         strict_model=True)
-    codec = codec.to("cuda")
+    codec = codec.to(args.device)
     codec = codec.eval()
 
     print(f'Processing {args.input_file}')
@@ -39,7 +41,7 @@ def main():
         x = torchaudio.transforms.Resample(sr, config.data.sample_rate)(x)
     x = x[0, :]
     x = x.view(1, -1)
-    x = x.to("cuda")
+    x = x.to(args.device)
     if x.shape[1] % 320 != 0:
         x = F.pad(x, (0, 320 - x.shape[1] % 320))
     indices, _ = codec.encode(x, torch.tensor([args.num_codebooks], device=x.device), inference_cache=None)

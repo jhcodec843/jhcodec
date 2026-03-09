@@ -236,7 +236,7 @@ class Attention(nn.Module):
             qkv = self.rotary_emb(qkv, seqlen_offset=0, max_seqlen=None)
         
         # Use flash attention for training/prefill
-        if FA_AVAILABLE:
+        if FA_AVAILABLE and qkv.device.type == "cuda":
             qkv = qkv.to(torch.bfloat16)
             context = flash_attn_qkvpacked_func(
                 qkv,
@@ -316,7 +316,7 @@ class Attention(nn.Module):
         # Use flash attention for training/prefill
         qkv = qkv.to(torch.bfloat16)
 
-        if FA_AVAILABLE:
+        if FA_AVAILABLE and qkv.device.type == "cuda":
             if inference_cache.seqlen_offset == 0:
                 context = flash_attn_qkvpacked_func(
                     qkv,
@@ -357,12 +357,16 @@ class Attention(nn.Module):
             inference_cache.kv_cache[:, inference_cache.seqlen_offset : inference_cache.seqlen_offset + seqlen, 1] = v
 
             if self.window_size > 0:
-                start = 0 if inference_cache.seqlen_offset == 0 or inference_cache.seqlen_offset + seqlen < self.window_size else inference_cache.seqlen_offset + seqlen - self.window_size
+                if inference_cache.seqlen_offset == 0 or inference_cache.seqlen_offset + seqlen < self.window_size:
+                    start = 0
+                else:
+                    start = inference_cache.seqlen_offset - self.window_size
                 k_window = inference_cache.kv_cache[:, start : inference_cache.seqlen_offset + seqlen, 0]
                 v_window = inference_cache.kv_cache[:, start : inference_cache.seqlen_offset + seqlen, 1]
             else:
-                k_window = inference_cache.kv_cache[:, : inference_cache.seqlen_offset + seqlen, 0]
-                v_window = inference_cache.kv_cache[:, : inference_cache.seqlen_offset + seqlen, 1]
+                start = 0
+                k_window = inference_cache.kv_cache[:, start : inference_cache.seqlen_offset + seqlen, 0]
+                v_window = inference_cache.kv_cache[:, start : inference_cache.seqlen_offset + seqlen, 1]
             k_window = k_window.contiguous()
             v_window = v_window.contiguous()
 
