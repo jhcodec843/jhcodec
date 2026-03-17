@@ -11,6 +11,13 @@
 JHCodec is a pure Transformer decoder based neural audio codec with residual vector quantization. It shows state-of-the-art performance with minimal latency.
 ![](asset/overall.png)
 
+## Errata
+In section 2.2 there is a mistake: (SW2V)
+```
+We choose multilingually trained W2V-BERT 2.0 *(SW2V)* --> We choose multilingually trained W2V-BERT 2.0
+```
+
+
 ## Overview
 
 This repository contains the *implementation for training and inference* neural audio codecs with end-to-end training capabilities. 
