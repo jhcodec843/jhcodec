@@ -10,6 +10,7 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description="Decode eval for jhcodec (single file)")
+    parser.add_argument("--from_hf", action="store_true", help="Load from Hugging Face")
     parser.add_argument("--config", default="config/config_mimi_recon.json", type=str, help="Path to config file")
     parser.add_argument("--checkpoint", default="jhcodec_mimi_1000000.pt", type=str, help="Path to checkpoint file")
     parser.add_argument("--input_file", type=str, required=True, help="Input WAV/flac file")
@@ -19,19 +20,22 @@ def main():
     # cannot understand why, but cpu shows degradation in reconstruction quality, please report if you find the reason
     args = parser.parse_args()
 
-    config = omegaconf.OmegaConf.load(args.config)
-    if config.model.rvq.type == "mimi":
-        codec = JHCodecMimi(config.model)
-    elif config.model.rvq.type == "dac":
-        codec = JHCodecDAC(config.model)
+    if args.from_hf:
+        codec = utils.load_pretrained_jhcodec(repo_id='jhcodec/jhcodec')
     else:
-        raise ValueError(f"Invalid model type: {config.model.rvq.type}")
-    assert args.num_codebooks <= config.model.rvq.num_codebooks, f"Number of codebooks to use for decoding ({args.num_codebooks}) must be less than or equal to the number of codebooks in the model ({config.model.rvq.num_codebooks})"
+        config = omegaconf.OmegaConf.load(args.config)
+        if config.model.rvq.type == "mimi":
+            codec = JHCodecMimi(config.model)
+        elif config.model.rvq.type == "dac":
+            codec = JHCodecDAC(config.model)
+        else:
+            raise ValueError(f"Invalid model type: {config.model.rvq.type}")
+        assert args.num_codebooks <= config.model.rvq.num_codebooks, f"Number of codebooks to use for decoding ({args.num_codebooks}) must be less than or equal to the number of codebooks in the model ({config.model.rvq.num_codebooks})"
 
-    checkpoint_path = args.checkpoint
-    _, _, _, _, _ = utils.load_checkpoint(
-        codec, None, None, checkpoint_path,
-        strict_model=True)
+        checkpoint_path = args.checkpoint
+        _, _, _, _, _ = utils.load_checkpoint(
+            codec, None, None, checkpoint_path,
+            strict_model=True)
     codec = codec.to(args.device)
     codec = codec.eval()
 
@@ -46,6 +50,18 @@ def main():
         x = F.pad(x, (0, 320 - x.shape[1] % 320))
     indices, _ = codec.encode(x, torch.tensor([args.num_codebooks], device=x.device), inference_cache=None)
     decoded, _ = codec.decode(indices, torch.tensor([args.num_codebooks], device=x.device), inference_cache=None)
+    # streaming example
+    #inference_cache = None
+    #indices = []
+    #for i in range(0, x.shape[1], 320):
+    #    indice, inference_cache = codec.encode(x[:, i:i+320], torch.tensor([args.num_codebooks], device=x.device), inference_cache=inference_cache)
+    #    indices.append(indice)
+
+    #inference_cache = None
+    #decoded = []
+    #for i in range(0, x.shape[1], 320):
+    #    decoded_chunk, inference_cache = codec.decode(indices, torch.tensor([args.num_codebooks], device=x.device), inference_cache=inference_cache)
+    #    decoded = torch.cat([decoded, decoded_chunk], dim=1)
 
     torchaudio.save(args.output_file, decoded.detach().cpu(), config.data.sample_rate)
     print(f'Saved to {args.output_file}')

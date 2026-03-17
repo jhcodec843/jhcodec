@@ -24,6 +24,7 @@ The codec supports:
 - [ ] Revise Readme
 - [x] Upload checkpoint
 - [x] Upload to HuggingFace
+- [x] Auto-download from HuggingFace
 - [ ] Upload to PyPI (probably after the review)
 - [ ] Make non-anonymous (after the review)
 
@@ -40,6 +41,7 @@ pip install -e .
 - [omegaconf==2.3.0](https://omegaconf.readthedocs.io/en/2.3_branch/): for configuration management
 - [Flash-Attention](https://github.com/Dao-AILab/flash-attention): For fast train/inference. We tested with `flash-attn==2.7.4.post1` and `flash-attn==2.8.3`. 
 - [HF transformers](https://huggingface.co/docs/transformers/index): Required only for running baselines and [w2v-bert2.0](https://huggingface.co/facebook/w2v-bert-2.0). JHCodec inference has no dependency on it.
+- [huggingface_hub](https://huggingface.co/docs/huggingface_hub/index): Required only if you want to use `--from_hf` to auto-download official checkpoints/configs.
 
 We have provided a [Shell Script](/installcu128.sh) to help set up the environment. 
 PLEASE DO NOT RUN It Directly. INSTEAD, REVIEW THE SCRIPT AND MODIFY IT AS NEEDED FOR YOUR SYSTEM.
@@ -159,6 +161,16 @@ Key training parameters (configurable in JSON config files):
 Single Files
 ```bash
 python jhcodec/inference.py \
+    --from_hf \
+    --input_file /path/to/input.wav \
+    --output_file /path/to/output.wav \
+    --num_codebooks 8 \
+    --device 'cuda'
+```
+
+Single Files (load from a local checkpoint)
+```bash
+python jhcodec/inference.py \
     --config config/config_mimi_recon.json \
     --checkpoint jhcodec_mimi_1000000.pt \
     --input_file /path/to/input.wav \
@@ -176,6 +188,25 @@ python jhcodec/decode_eval.py \
     --glob_pattern "/path/to/audio/*.wav" \
     --out_dir "out_dir" \
     --hierarchy 4
+```
+
+## Use in Python
+```python
+# READ inference.py
+from jhcodec.utils import load_pretrained_jhcodec
+codec = utils.load_pretrained_jhcodec(repo_id='jhcodec/jhcodec')
+codec = codec.eval()
+codec = codec.to('cuda')
+x, sr = torchaudio.load(args.input_file)
+if sr != config.data.sample_rate:
+    x = torchaudio.transforms.Resample(sr, config.data.sample_rate)(x)
+x = x[0, :]
+x = x.view(1, -1)
+x = x.to(args.device)
+if x.shape[1] % 320 != 0:
+    x = F.pad(x, (0, 320 - x.shape[1] % 320))
+indices, _ = codec.encode(x, torch.tensor([args.num_codebooks], device=x.device), inference_cache=None)
+decoded, _ = codec.decode(indices, torch.tensor([args.num_codebooks], device=x.device), inference_cache=None)
 ```
 
 **Arguments:**

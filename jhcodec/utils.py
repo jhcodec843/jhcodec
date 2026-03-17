@@ -8,6 +8,8 @@ MATPLOTLIB_FLAG = True
 import numpy as np
 import torchaudio
 import logging
+import omegaconf
+
 logging.basicConfig(level=logging.INFO)
 
 def load_checkpoint(model, optimizer=None, warmup_scheduler=None, checkpoint_path=None, strict_model=False):
@@ -454,3 +456,49 @@ def find_free_port():
     port = sock.getsockname()[1]
     sock.close()
     return port
+
+def load_pretrained_jhcodec(repo_id='jhcodec/jhcodec'):
+    from jhcodec.model.codec import JHCodecMimi
+    from huggingface_hub import hf_hub_download
+    # config: jhcodec/jhcodec/config.json
+    # ckpt: jhcodec/jhcodec/jhcodec_mimi_1000000.pt
+    # download config and ckpt from huggingface
+    config_path = hf_hub_download(
+        repo_id=repo_id,
+        filename="config.json",
+    )
+    ckpt_path = hf_hub_download(
+        repo_id=repo_id,
+        filename="jhcodec_mimi_1000000.pt",
+    )
+    config = omegaconf.OmegaConf.load(config_path)
+    print(config)
+    codec = JHCodecMimi(config.model, training=False)
+    load_checkpoint(codec, None, None, ckpt_path, strict_model=True)
+    return codec
+
+def load_pretrained_sw2v(repo_id='jhcodec/sw2v_60k'):
+    from jhcodec.model.sw2v import AudioEncoder
+    from huggingface_hub import hf_hub_download
+    assert repo_id in ['jhcodec/sw2v_60k', 'jhcodec/sw2v_120k'], f"Invalid repo_id: {repo_id}"
+
+    # config: jhcodec/sw2v_60k/config.json
+    # ckpt: jhcodec/sw2v_60k/sw2v_60k.pt
+    config_path = hf_hub_download(
+        repo_id=repo_id,
+        filename="config.json",
+    )
+    config = omegaconf.OmegaConf.load(config_path)
+    try:
+        ckpt_path = hf_hub_download(
+            repo_id=repo_id,
+            filename="sw2v_60000.pt",
+        )
+    except:
+        ckpt_path = hf_hub_download(
+            repo_id=repo_id,
+            filename="sw2v_120000.pt",
+        )
+    w2v = AudioEncoder(config.w2v, training=False)
+    load_checkpoint(w2v, None, None, ckpt_path, strict_model=True)
+    return w2v
